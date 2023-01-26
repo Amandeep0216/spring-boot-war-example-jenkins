@@ -13,8 +13,6 @@ mvn test'''
 
     stage('test') {
       steps {
-        echo 'hello'
-        sleep 5
         sh 'mvn build'
       }
     }
