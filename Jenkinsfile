@@ -13,7 +13,7 @@ mvn test'''
 
     stage('test') {
       steps {
-        sh 'mvn build'
+        sh 'mvn package'
       }
     }
 
