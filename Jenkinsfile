@@ -20,7 +20,10 @@ mvn test'''
     stage('prod') {
       steps {
         sh '''deploy adapters: [tomcat9(credentialsId: \'tomcatDetails\', path: \'\', url: \'http://localhost:8448\')], contextPath: \'/app1\', war: \'**/*.war\'
-              '''
+  input {
+                message "Should we continue?"
+                ok "Yes we Should"
+            }            '''
         echo 'prod'
       }
     }
